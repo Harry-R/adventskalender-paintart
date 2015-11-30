@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">Adventskalender</string>
     <string name="crash_toast">Leider ist die App abgestürzt, ein Absturzbericht wird gesendet</string>
+
+    <string name="comment_too_late_monday">Etwa am Wochenende zu viel gefeiert?</string>
+    <string-array name="comments_too_late">
+        <item>Du Langschläfer.</item>
+        <item>Nur der frühe Vogel fängt den Wurm</item>
+        <item>Guck lieber noch mal auf das Datum</item>
+        <item>Wohl verschlafen gestern</item>
+    </string-array>
+    <string-array name="comments_too_early">
+        <item>Nicht so übermotiviert</item>
+        <item>Schummeln zählt nicht</item>
+        <item>Guck lieber noch mal auf das Datum</item>
+        <item>Hättest du wohl gerne, erlaube ich dir aber nicht</item>
+    </string-array>
 </resources>
