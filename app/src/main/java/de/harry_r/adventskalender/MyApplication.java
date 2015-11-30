@@ -10,7 +10,7 @@ import org.acra.sender.HttpSender;
 @ReportsCrashes(
         httpMethod = HttpSender.Method.PUT,
         reportType = HttpSender.Type.JSON,
-        formUri = "http://acra.mytfg.de/acra-adventskalender/_design/acra-storage/_update/report",
+        formUri = "https://acra.mytfg.de/acra-adventskalender/_design/acra-storage/_update/report",
         formUriBasicAuthLogin = "adventskalender_app",
         formUriBasicAuthPassword = "1hv8AeshKfgWyKtbsJxM420La8iLcRUlEg==",
 
