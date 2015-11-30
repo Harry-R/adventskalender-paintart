@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Adventskalender</string>
+    <string name="crash_toast">Leider ist die App abgestürzt, ein Absturzbericht wird gesendet</string>
 </resources>
