@@ -24,13 +24,14 @@ public class MainActivity extends AppCompatActivity {
     private void doDoorAction(int number) {
         switch (Utils.checkDate(number)) {
             case 0:
-                Utils.showCommentTooLate(this);
+                Utils.showCommentTooEarly(this);
                 break;
             case 1:
                 // show image
                 break;
             case 2:
-                Utils.showCommentTooEarly(this);
+                Utils.showCommentTooLate(this);
+                // show image
                 break;
 
         }
