@@ -1,5 +1,7 @@
 package de.harry_r.adventskalender;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,16 +23,43 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.weihnachtsmann
     };
 
+    private Boolean[] opened_doors = new Boolean[24];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         View decorView = getWindow().getDecorView();
         // Hide the status bar.
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
+        // Restore preferences
+        SharedPreferences settings = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        for (int i=1; i<=24; i++) {
+            opened_doors[i-1] = settings.getBoolean("openedDoors" + i, false);
+            if (opened_doors[i-1]) {
+                // get button id
+                Button button = (Button) findViewById(getResources().getIdentifier("tor" + i, "id",
+                        this.getPackageName()));
+                //open door
+                openDoor(i, button);
+            }
+        }
+    }
 
-        setContentView(R.layout.activity_main);
+    protected void onStop(){
+        super.onStop();
+        //save settings
+        SharedPreferences settings = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        //creating a editor and add variables
+        SharedPreferences.Editor editor = settings.edit();
+        // can't add an array, so have to iterate through the array and save every single value
+        for (int i=1; i<=24; i++) {
+            editor.putBoolean("openedDoors" + i, opened_doors[i-1]);
+        }
+        // Commit the edits!
+        editor.apply();
     }
 
     private void doDoorAction(int number, Button door) {
@@ -53,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         door.setText("");
         door.setBackgroundResource(images[number-1]);
         door.setEnabled(false);
+        opened_doors[number-1] = true;
     }
 
 
