@@ -10,9 +10,16 @@ import de.harry_r.adventskalender.Utils.Utils;
 public class MainActivity extends AppCompatActivity {
 
     private int[] images = {
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher};
+            R.drawable.zimtstern,
+            R.drawable.kerze,
+            R.drawable.kugel,
+            R.drawable.stern,
+            R.drawable.stiefel,
+            R.drawable.stern_blau,
+            R.drawable.unicorn,
+            R.drawable.schlitten,
+            R.drawable.weihnachtsmann
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     private void openDoor(int number, Button door) {
         door.setText("");
         door.setBackgroundResource(images[number-1]);
+        door.setEnabled(false);
     }
 
 
