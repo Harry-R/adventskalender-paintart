@@ -1,7 +1,11 @@
 # Paintart Adventskalender Android App
 
 Ein Adventskalender im Paintart Stil - oder Weihnachtsbasteln für Informatiker ;)
+
+
 Kleines Projekt, das größtenteils an einem Abend entstanden ist.
+
+
 Da bisher noch einige Türchenbilder fehlen, sind kreative Paintart-Bilder gerne erwünscht. 
 
 ## Copyright / License
