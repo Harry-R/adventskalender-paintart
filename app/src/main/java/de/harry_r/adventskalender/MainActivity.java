@@ -4,14 +4,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import de.harry_r.adventskalender.Utils.Utils;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int[] images = {
+            R.mipmap.ic_launcher,
+            R.mipmap.ic_launcher,
+            R.mipmap.ic_launcher};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         View decorView = getWindow().getDecorView();
         // Hide the status bar.
@@ -21,27 +26,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    private void doDoorAction(int number) {
+    private void doDoorAction(int number, Button door) {
         switch (Utils.checkDate(number)) {
             case 0:
                 Utils.showCommentTooEarly(this);
                 break;
             case 1:
-                // show image
+                openDoor(number, door);
                 break;
             case 2:
                 Utils.showCommentTooLate(this);
-                // show image
+                openDoor(number, door);
                 break;
 
         }
     }
 
+    private void openDoor(int number, Button door) {
+        door.setText("");
+        door.setBackgroundResource(images[number-1]);
+    }
 
-    public void open_door(View view) {
+
+    public void clickDoor(View view) {
         Button door = (Button) view;
         int number = Integer.parseInt(door.getText().toString());
-        doDoorAction(number);
+        doDoorAction(number, door);
     }
 
 }
