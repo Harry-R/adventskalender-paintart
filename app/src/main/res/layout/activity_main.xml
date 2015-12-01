@@ -1,17 +1,309 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-       />
+        android:weightSum="6"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tor10"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="10"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor15"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="15"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor8"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="8"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor21"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="21"
+                android:textColor="#FF0000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/tor23"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="23"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="1"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor20"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="20"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor7"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="7"
+                android:textColor="#FF0000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tor11"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="11"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor13"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="13"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor9"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="9"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor17"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="17"
+                android:textColor="#FF0000" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tor14"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="14"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="2"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor16"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="16"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor6"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="6"
+                android:textColor="#FF0000" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tor5"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="5"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor12"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="12"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="3"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor18"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="18"
+                android:textColor="#FF0000" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tor22"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="22"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor19"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="19"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor24"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="24"
+                android:textColor="#FF0000" />
+
+            <Button
+                android:id="@+id/tor4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="open_door"
+                android:text="4"
+                android:textColor="#FF0000" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </FrameLayout>
